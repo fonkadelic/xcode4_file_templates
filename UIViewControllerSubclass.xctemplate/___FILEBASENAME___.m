@@ -10,17 +10,26 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 @implementation ___FILEBASENAMEASIDENTIFIER___
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)init
 {
-  if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
-      
-  }
-  
-  return self;
+    // Call the superclass's designated initializer
+    self = [super initWithNibName:nil
+                           bundle:nil];
+    
+    if (self) {
+        // Custom initialization
+    }
+    
+    return self;
+}
+
+- (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle
+{
+    return [self init];
 }
 
 #pragma mark -
-#pragma mark <#Label#>
+#pragma mark View Lifecycle
 
 - (void)loadView
 {
